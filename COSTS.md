@@ -4,11 +4,10 @@ The account owner supplied a Task Logs screenshot on 2026-10-13. Each visible ta
 
 | 用例 / Case | Model | Credits | USD |
 |---|---|---:|---:|
-| standard-coral-bowl | gpt-image-2 | 3 | $0.015 |
 | vip-low-coral-bowl | gpt-image-2-vip | 0.38 | $0.00190 |
 | vip-low-dark-bowl | gpt-image-2-vip | 0.38 | $0.00190 |
 | vip-low-interior-bowl | gpt-image-2-vip | 0.38 | $0.00190 |
+| standard-coral-bowl | gpt-image-2 | 3 | $0.015 |
 | **Total** | | **4.14** | **$0.02070** |
 One separate initial Scumble submission returned no task ID and is absent from this screenshot. Its acceptance and cost are unknown; it was not retried and is excluded from the confirmed total.
 
-Across both repositories: 11 images and one 4-second video, 22.82 credits, **$0.1141**. Images: $0.0733; video: $0.0408.

@@ -4,11 +4,10 @@
 
 | 用例 / Case | Model | Credits | USD |
 |---|---|---:|---:|
-| standard-coral-bowl | gpt-image-2 | 3 | $0.015 |
 | vip-low-coral-bowl | gpt-image-2-vip | 0.38 | $0.00190 |
 | vip-low-dark-bowl | gpt-image-2-vip | 0.38 | $0.00190 |
 | vip-low-interior-bowl | gpt-image-2-vip | 0.38 | $0.00190 |
+| standard-coral-bowl | gpt-image-2 | 3 | $0.015 |
 | **合计** | | **4.14** | **$0.02070** |
 另一次 Scumble 首次提交未返回任务 ID，也未出现在此截图中，受理与消费未知，未重试；不计入已确认合计。
 
-两个项目合计：11 张图+1条4秒视频，22.82 积分，**$0.1141**。其中图片 $0.0733，视频 $0.0408。

@@ -1,17 +1,14 @@
-# ToAPIs 价表与可用模型
+# 本指南的 ToAPIs 图片模型历史价格
 
-2026-10-13，用本轮测试 Key 只读查询。USD；报价可能随账户、通道和时间变化，先核对自己的 `GET /v1/pricing?model=...`。
+报价日期：**2026-10-13**，来自本次测试 Key。费用由 ToAPIs 指南维护，不是上游 Provider 文档的一部分。新调用前用自己的 Key 查询 `GET /v1/pricing?model=...`，历史报价不锁定当前价格。
 
-| 模型 | 条件 | 美元报价 | 实测范围 |
-|---|---|---:|---|
-| gpt-image-2 | n=1，1K；省略 quality | $0.015/次 | 两个项目文生图 |
-| gpt-image-2 | n=1，2K / 4K | $0.020 / $0.025/次 | 有报价，未生成 |
-| gpt-image-2-vip | n=1，1K，low | $0.0019/次 | 两个项目生成及参考改图 |
-| gpt-image-2-vip | n=1，1K，medium / high | $0.0169 / $0.0675/次 | 有报价，未生成 |
-| grok-video-1.5 | 单张首帧，4秒，480p | $0.0102/秒；4秒 $0.0408 | 独立视频扩展一次 |
+| 展示模型 / API ID | 实测档位 | 历史报价 | 已确认单张消费 | 调用次数 |
+|---|---|---:|---:|---:|
+| gpt-image-2(VIP) / `gpt-image-2-vip` | low / 1K / n=1 | $0.0019/image | $0.0019 | 3 |
+| gpt-image-2 / `gpt-image-2` | 1K / n=1，不传 quality | $0.015/image | $0.015 | 1 |
 
-“更便宜”特指 **VIP low 1K 相比本次 standard 1K**：$0.0019 vs $0.015，单次报价低约 **87.3%**；不同通道和画质参数，效果不等价，不能写成全平台最低价。VIP medium / high 可能比标准更贵。图片价格已包含返回的账户/组折扣，不重复乘系数。
+gpt-image-2(VIP) **$0.0019/image 起**，本例 low/1K 为 **$0.0019/image**。模型、通道和画质参数不同，不能由价格推断效果相同。报价已包含返回的账户折扣。
 
-本仓库图片代码仅验证 gpt-image-2 与 gpt-image-2-vip；独立视频脚本验证 grok-video-1.5。平台有其他图片模型报价，但不能因此声称这些模型已在本工具可用。
+四次图片调用合计 **$0.0207**。API billing 为空，消费来源为账号持有人确认的后台截图；另一次早期受理/费用未知的提交未计入。Scumble 仅处理图片，本页不列视频价格或视频验收。
 
-[本次消费](COSTS_zh-CN.md) · [Catalog snapshot](evidence/pricing.json) · [Current ToAPIs price list](https://toapis.com/en/pricing) · [Pricing and billing contract](https://docs.toapis.com/docs/en/api-reference/account/pricing)
+[逐项消费](COSTS_zh-CN.md) · [原始历史报价](evidence/pricing.json) · [图片验收清单](ACCEPTANCE_zh-CN.md) · [ToAPIs 当前价表](https://toapis.com/en/pricing) · [报价 API](https://docs.toapis.com/docs/en/api-reference/account/pricing) · [English](PRICING.md)

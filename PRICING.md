@@ -1,17 +1,14 @@
-# ToAPIs pricing and tested models
+# Dated ToAPIs image prices for this guide
 
-Checked on 2026-10-13 with the test key, using read-only requests. USD rates can vary by account, route and time. Query `GET /v1/pricing?model=...` with your own key before submitting.
+Quoted with the test key on **2026-10-13**. These historical model-specific rates belong to this ToAPIs guide, not upstream provider documentation. Query `GET /v1/pricing?model=...` with your own key before submitting a new request.
 
-| Model | Conditions | USD catalog rate | Live scope |
-|---|---|---:|---|
-| gpt-image-2 | n=1, 1K; omit quality | $0.015/request | Text-to-image in both projects |
-| gpt-image-2 | n=1, 2K / 4K | $0.020 / $0.025/request | Quoted, not generated |
-| gpt-image-2-vip | n=1, 1K, low | $0.0019/request | Generation and reference edits |
-| gpt-image-2-vip | n=1, 1K, medium / high | $0.0169 / $0.0675/request | Quoted, not generated |
-| grok-video-1.5 | One first frame, 4s, 480p | $0.0102/second; $0.0408 for 4s | One independent video helper run |
+| Display model / API ID | Tested preset | Historical quote | Confirmed charge per image | Calls |
+|---|---|---:|---:|---:|
+| gpt-image-2(VIP) / `gpt-image-2-vip` | low / 1K / n=1 | $0.0019/image | $0.0019 | 3 |
+| gpt-image-2 / `gpt-image-2` | 1K / n=1; quality omitted | $0.015/image | $0.015 | 1 |
 
-“Cheaper” means **VIP low 1K versus standard 1K in this run**: $0.0019 versus $0.015, approximately **87.3% lower per-request catalog rate**. Different routes and quality settings can produce different images. This is not a lowest-price or equivalent-quality claim. VIP medium/high can cost more than standard. Returned account/group discounts are already included.
+gpt-image-2(VIP) starts at **$0.0019/image**; the tested low/1K configuration is **$0.0019/image**. Models, channels and quality settings differ; rates do not imply equivalent output quality. Returned account discounts are already included.
 
-The image code here was validated only with gpt-image-2 and gpt-image-2-vip; the separate video helper validates grok-video-1.5. Other platform catalog entries do not establish compatibility with these tools.
+The four image charges total **$0.0207**. API billing was absent; the account owner confirmed the dashboard charges. One earlier unconfirmed submission is excluded. Scumble is image-only; no video pricing or video acceptance applies here.
 
-[Actual charges](COSTS.md) · [Catalog snapshot](evidence/pricing.json) · [Current ToAPIs price list](https://toapis.com/en/pricing) · [Pricing and billing contract](https://docs.toapis.com/docs/en/api-reference/account/pricing)
+[Actual charges](COSTS.md) · [Original dated pricing snapshot](evidence/pricing.json) · [Image checklist](ACCEPTANCE.md) · [Current ToAPIs rates](https://toapis.com/en/pricing) · [Pricing API](https://docs.toapis.com/docs/en/api-reference/account/pricing) · [中文](PRICING_zh-CN.md)
